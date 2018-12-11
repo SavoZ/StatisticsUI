@@ -1,0 +1,62 @@
+<!-- Side navigation -->
+<div class="alerts">
+  <div *ngFor="let alert of alerts; let i = index" [attr.data-index]="i">
+    <alert type="{{alert.type}}" dismissible="dismissible" (onClosed)="onClosed(alert)">
+      {{alert.message}}
+    </alert>
+  </div>
+</div>
+<div class="sidenav">
+  <div class="header">
+  </div>
+  <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
+    <i class="fas fa-home"></i>
+    <span> Index</span></a>
+    <a routerLink="/statistics/index" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
+      <i class="fas fa-home"></i>
+      <span> Statistics</span></a>
+      <a routerLink="/statistics/teams" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
+        <i class="fas fa-home"></i>
+        <span>Teams</span></a>
+</div>
+
+<!-- Page content -->
+<div class="wrapper">
+  <ng-progress [spinner]="false" [thick]="true" color="#C43D2F"></ng-progress>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top justify-content-end light-border action-bar">
+    <button class="btn btn-sm btn-link" (click)="showModal(template)" tooltip="Sign out" placement="left">
+      <i class="fas fa-power-off fa-fw"></i>
+    </button>
+  </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top justify-content-end light-border action-bar"
+    style="margin-bottom: 10">
+    <button class="btn btn-sm btn-link" *ngIf="isAddVisible" (click)="onAddClick()" tooltip="Add">
+      <i class="fas fa-plus fa-fw"></i>
+    </button>
+    <button class="btn btn-sm btn-link" *ngIf="isEditVisible" (click)="onEditClick()" tooltip="Edit">
+      <i class="fas fa-edit fa-fw"></i>
+    </button>
+    <button class="btn btn-sm btn-link" *ngIf="isSaveVisible" (click)="onSaveClick()" tooltip="Save">
+      <i class="fas fa-save fa-fw"></i>
+    </button>
+    <button class="btn btn-sm btn-link" *ngIf="isCsvVisible" (click)="onCsvClick()" tooltip="Export to CSV">
+      <i class="far fa-file-alt fa-fw"></i>
+    </button>
+    <button class="btn btn-sm btn-link" *ngIf="isUploadVisible" (click)="onUploadClick()" tooltip="Upload">
+      <i class="fas fa-file-upload fa-fw"></i>
+    </button>
+    <button class="btn btn-sm btn-link" *ngIf="isBackVisible" (click)="onBackClick()" tooltip="Back">
+      <i class="fas fa-chevron-left fa-fw"></i>
+    </button>
+  </nav>
+  <div class="conteiner-fluid" style="margin-left: 10px; margin-right: 10px;">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<ng-template #template>
+  <div class="modal-body text-center">
+    <p>Log out?</p>
+    <button type="button" class="btn btn-default" (click)="signOut()">Yes</button> &nbsp;
+    <button type="button" class="btn btn-danger" (click)="decline()">No</button>
+  </div>
+</ng-template>

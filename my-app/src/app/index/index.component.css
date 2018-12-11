@@ -1,0 +1,82 @@
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 220px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #fff; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    -webkit-box-shadow: 0px 1px 5px 0px #CACACA;
+    -moz-box-shadow: 0px 1px 5px 0px #CACACA;
+    box-shadow: 0px 1px 5px 0px #CACACA;
+}
+
+/* The navigation menu links */
+.sidenav a, .title {
+    padding: 10px 8px 10px 16px;
+    text-decoration: none;
+    color: #616161;
+    display: block;
+    cursor: pointer;
+}
+
+.title a, title a:hover{
+    color: #fff !important;
+    border-bottom: unset !important;
+}
+
+.sidenav a{
+    border-bottom: 1px rgb(226, 226, 226) solid;
+}
+
+.inner-menu a i{
+    margin-left: 15px;
+}
+
+.action-bar{
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    min-height: 56px;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #C43D2F;
+}
+
+.active-link {
+    color: #C43D2F !important;
+}
+
+.wrapper{
+    margin-left: 220px;
+}
+
+.header{
+    background: #C43D2F;
+    height: 56px;
+}
+
+.light-border{
+    border-bottom: 1px #D8D8D8 solid
+}
+
+.navbar {
+    min-height: 40px;
+}
+
+.alerts {
+    position:fixed; 
+    top: 0px; 
+    left: 0px; 
+    right: 0px; 
+    z-index: 10000; 
+    text-align: center;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
