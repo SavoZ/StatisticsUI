@@ -19,19 +19,14 @@ export class TeamsComponent implements OnInit {
     { headerName: '0-2 %', field: 'zeroToTwoPercentage', width: 80 },
     { headerName: '3+ %', field: 'threePlusPercentage', width: 80 },
     { headerName: '2-3 %', field: 'twoToThreeGoalsPercentage', width: 80 },
-    { headerName: '1&2-3 %', field: 'zeroTwoToThreeGoals', width: 120 },
     { headerName: '2-4 %', field: 'twoToFourGoalsPercentage', width: 80 },
-    { headerName: '1&2-4 %', field: 'zeroTwoToFourGoals', width: 120 },
-    { headerName: '1&2-5 %', field: 'zeroTwoToFive', width: 120 },
-    { headerName: '1&3-5 %', field: 'zeroThreeToFive', width: 120 },
-    { headerName: 'GG&3+ %', field: 'ggThreePlusPercentage', width: 120 },
     { headerName: '1-3 %', field: 'oneToThreeGoalsPercentage', width: 80 },
   ];
 
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.teams = this.http.get(API_ENDPOINT + 'statistics/GetTeamsStatistics');
+    this.teams = this.http.get(API_ENDPOINT + 'statistics/GetGoalsStatistics');
 
   }
 

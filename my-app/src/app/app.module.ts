@@ -23,6 +23,7 @@ import { AlertModule } from 'ngx-bootstrap/alert';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StatisticsIndexComponent } from './index/statistics/statistics-index/statistics-index.component';
 import { TeamsComponent } from './index/statistics/teams/teams.component';
+import { DoubleChanceComponent } from './index/statistics/double-chance/double-chance.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,8 @@ const routes: Routes = [
         path: 'statistics', children: [
           { path: 'index', component: StatisticsIndexComponent },
           { path: 'teams', component: TeamsComponent },
+          { path: 'double-chance', component: DoubleChanceComponent },
+
         ]
       },
     ]
@@ -45,6 +48,7 @@ const routes: Routes = [
     IndexComponent,
     StatisticsIndexComponent,
     TeamsComponent,
+    DoubleChanceComponent,
   ],
   imports: [
     BrowserModule,
