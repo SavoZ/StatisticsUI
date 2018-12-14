@@ -1,0 +1,15 @@
+_docs/old_template/
+_bin/
+packages*/
+*.suo
+*.user
+_ReSharper.*
+bin
+obj
+*.exe
+!NuGet.exe
+
+*.ide
+
+*.htm
+
