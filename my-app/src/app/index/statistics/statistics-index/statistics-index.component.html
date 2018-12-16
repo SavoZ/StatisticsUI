@@ -1,7 +1,8 @@
 <ag-grid-angular 
-    style="height: 500px;" 
+    style="height: 90vh;" 
     class="ag-theme-balham"
     [rowData]="matches | async" 
     [columnDefs]="columnDefs"
     [enableSorting]="true"
+    [pagination]="true"
 ></ag-grid-angular>

@@ -13,15 +13,18 @@ export class DoubleChanceComponent implements OnInit {
   @ViewChild('agGrid') agGrid: AgGridNg2;
   teams;
   columnDefs = [
-    {
-      headerName: 'Tim', field: 'teamName', width: 200},
+    { headerName: 'Tim', field: 'teamName', width: 150},
+    { headerName: 'Liga', field: 'leagueName', width: 150},
     { headerName: 'Mečeva', field: 'totalGames', width: 100 },
-    { headerName: '1&2-3 %', field: 'zeroTwoToThreeGoals', width: 120 },
-    { headerName: '1&2-4 %', field: 'zeroTwoToFourGoals', width: 120 },
-    { headerName: '1&2-5 %', field: 'zeroTwoToFive', width: 120 },
-    { headerName: '1&3-5 %', field: 'zeroThreeToFive', width: 120 },
-    { headerName: 'GG&3+ %', field: 'ggThreePlusPercentage', width: 120 },
-    { headerName: 'GGor3+ %', field: 'gGorThreePlusPercentage', width: 120 },
+    { headerName: '1&2-3 %', field: 'zeroTwoToThreeGoals', width: 110 },
+    { headerName: '1&2-4 %', field: 'zeroTwoToFourGoals', width: 110 },
+    { headerName: '2&2-3 %', field: 'twoTwoToThreeGoals', width: 110 },
+    { headerName: '2&2-4 %', field: 'twoTwoToFourGoals', width: 110 },
+    { headerName: 'GG&3+ %', field: 'ggThreePlusPercentage', width: 110 },
+    { headerName: 'GGor3+ %', field: 'gGorThreePlusPercentage', width: 110 },
+    { headerName: '1X&2+ %', field: 'notTwoAndTwoGoals', width: 110 },
+    { headerName: '1X&3+ %', field: 'notTwoAndThreeGoals', width: 110 },
+
   ];
 
   constructor(private http: HttpClient) { }

@@ -13,8 +13,8 @@ export class TeamsComponent implements OnInit {
   @ViewChild('agGrid') agGrid: AgGridNg2;
   teams;
   columnDefs = [
-    {
-      headerName: 'Tim', field: 'teamName', width: 200},
+    { headerName: 'Tim', field: 'teamName', width: 140},
+    { headerName: 'Liga', field: 'leagueName', width: 150},
     { headerName: 'Mečeva', field: 'totalGames', width: 100 },
     { headerName: '0-2 %', field: 'zeroToTwoPercentage', width: 80 },
     { headerName: '3+ %', field: 'threePlusPercentage', width: 80 },
