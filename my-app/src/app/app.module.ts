@@ -24,6 +24,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StatisticsIndexComponent } from './index/statistics/statistics-index/statistics-index.component';
 import { TeamsComponent } from './index/statistics/teams/teams.component';
 import { DoubleChanceComponent } from './index/statistics/double-chance/double-chance.component';
+import { MatchDoubleChanceComponent } from './index/statistics/match-double-chance/match-double-chance.component';
+import { ResultComponent } from './index/statistics/result/result.component';
 
 const routes: Routes = [
   {
@@ -34,6 +36,8 @@ const routes: Routes = [
           { path: 'index', component: StatisticsIndexComponent },
           { path: 'teams', component: TeamsComponent },
           { path: 'double-chance', component: DoubleChanceComponent },
+          { path: 'match-double-chance', component: MatchDoubleChanceComponent },
+          { path: 'result', component: ResultComponent },
 
         ]
       },
@@ -49,6 +53,8 @@ const routes: Routes = [
     StatisticsIndexComponent,
     TeamsComponent,
     DoubleChanceComponent,
+    MatchDoubleChanceComponent,
+    ResultComponent,
   ],
   imports: [
     BrowserModule,
